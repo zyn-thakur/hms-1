@@ -18,4 +18,4 @@ class Services(models.Model):
 
 
     class Meta:
-        db_table = "Service"
+        db_table = "Services"
