@@ -2,7 +2,9 @@ from django.urls import path,include
 from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 from django.contrib import admin
 from . import api
+from django.contrib import admin
 from django.conf import settings
+
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -26,6 +28,7 @@ urlpatterns = [
     path("admin/services/", include("services.urls")),
     path("admin/patients/", include("patients.urls")),
     path("admin/doctors/", include("doctor.urls")),
+    path("admin/userdetail/", include("userdetail.urls")),
     path('api/v1/', include(api.router.urls)),
     path('auth/login',MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/auth/refresh',TokenRefreshView.as_view(), name='token_refresh'),
