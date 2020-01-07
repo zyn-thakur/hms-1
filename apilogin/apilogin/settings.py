@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
+    # 'crispy_forms',
     'login',
     'services',
     'patients',
@@ -129,6 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = 'show'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'login', 'templates','static'),
 )

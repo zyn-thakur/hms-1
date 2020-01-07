@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 from django.contrib import admin
 from . import api
-from django.contrib import admin
+
 from django.conf import settings
 
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
